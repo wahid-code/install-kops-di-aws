@@ -19,3 +19,9 @@ setelah install kops di aws selesai.
 # kops update cluster --name ${KOPS_CLUSTER_NAME} --yes
 - validate kops
 # kops validate cluster
+- melihat token kubernetes
+# kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+- akses dashboard kubernetes di local
+# http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+- Delete Cluster Kops
+# kops delete cluster --name ${KOPS_CLUSTER_NAME} --yes
