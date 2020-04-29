@@ -25,3 +25,5 @@ setelah install kops di aws selesai.
 # http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
 - Delete Cluster Kops
 # kops delete cluster --name ${KOPS_CLUSTER_NAME} --yes
+- Dashboard
+# kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc5/aio/deploy/recommended.yaml
